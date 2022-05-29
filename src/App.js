@@ -1,12 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Button } from '@mui/material';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div className="App">
-       <Button>Add</Button>
-    </div>
+    <HomePage/>
   );
 }
 
