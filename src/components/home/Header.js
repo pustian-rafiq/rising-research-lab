@@ -1,73 +1,72 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+import { Close } from "@mui/icons-material";
+import { Box, IconButton } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    alignItems: 'flex-start',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(2),
-    // Override media queries injected by theme.mixins.toolbar
-    '@media all': {
-        minHeight: 128,
-    },
-}));
-
-export default function TopBanner() {
+export default function Header({ setMenu, menu }) {
+    const closeHandler = () => {
+        setMenu(!menu)
+    }
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-               
-                    <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#0066CE',padding:'30px 30px'}}>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="/"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'none', md: 'flex' },
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
+        <Box style={{ display: 'flex', justifyContent: 'center' }} sx={{ flexGrow: 1 }}>
+            <div className="headerContainer">
+                <ul className="headerContent">
+                    <li>News + Updates</li>
+                    <li>Research</li>
+                    <li>About</li>
+                    <li>Graduate Program</li>
+                    <li>People</li>
+                    <li>Events</li>
+                    <li>Videos</li>
+                    <li>Member Portal</li>
+                </ul>
+                <div>
+                    <Box  >
+                        <IconButton size="large" aria-label="search"  >
+                            <SearchOutlinedIcon />
+                        </IconButton>
+                        <IconButton
+                            size="large"
+                            aria-label="display more actions"
+                            edge="end"
+                            color="inherit"
                         >
-                            Rising Research Lab
-                        </Typography>
-                        <Box  >
-                            <IconButton size="large" aria-label="search"  >
-                                <SearchOutlinedIcon />
-                            </IconButton>
-                            <IconButton
+                            <PersonOutlineOutlinedIcon />
+                        </IconButton>
+
+                        {
+                            menu ?
+
+                                <IconButton
+                                    size="large"
+                                    aria-label="display more actions"
+                                    edge="end"
+                                    color="inherit"
+                                   
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                                :
+                                <IconButton
                                 size="large"
                                 aria-label="display more actions"
                                 edge="end"
                                 color="inherit"
+                               
                             >
-                                <PersonOutlineOutlinedIcon />
+                              <Close onClick={closeHandler}  />
                             </IconButton>
-                            <IconButton
-                                size="large"
-                                aria-label="display more actions"
-                                edge="end"
-                                color="inherit"
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                        </Box>
+                              
+                        }
                     </Box>
-               
-            </AppBar>
+
+                </div>
+            </div>
+            {/* <div>
+                <Close onClick={closeHandler} sx={{ color: 'white' }} />
+            </div> */}
         </Box>
     );
 }

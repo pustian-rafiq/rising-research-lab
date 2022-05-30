@@ -1,0 +1,27 @@
+
+.headerContainer{
+    /* padding-top: 10%; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
+   
+}
+.headerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+.headerContent li{
+    list-style: none;
+    font-size: 36px;
+    color:#898A8A;
+    font-weight: bold;
+    cursor: pointer;
+}
+.headerContent li:hover{
+ 
+    color:#000;
+ 
+}
