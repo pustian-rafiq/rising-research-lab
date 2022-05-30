@@ -14,6 +14,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { Close } from '@mui/icons-material';
 
 import Header from './Header'
+import Search from './Search'
 import { Grid } from '@mui/material';
 
 
@@ -39,15 +40,22 @@ const TopBanner = () => {
     };
 
     const [menu, setMenu] = useState(true)
+    const [searchIcon, setSearchIcon] = useState(true)
 
     const menuHandler = () => {
         setMenu(!menu)
     }
+    const searchHandler = () => {
+        setMenu(!menu)
+        setSearchIcon(!searchIcon)
+    }
 
+    console.log("menu",menu)
+    console.log("searchIcon",searchIcon)
     return (
         <>
             <Box sx={{display:'flex'}}>
-                <Box sx={myStyle} style={!menu ? { width: '70%', display: 'inline-block' } : { width: '100%' }} >
+                <Box sx={myStyle} style={!menu ? { width: '50%', display: 'inline-block' } : { width: '100%' }} >
                     <Box sx={{marginTop:'15%'}}>
                         <AppBar position="static" style={!menu ? { display: 'none' } : { width: '100%' }} >
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#0066CE', padding: '60px 30px' }}>
@@ -70,7 +78,7 @@ const TopBanner = () => {
                                 </Typography>
                                 <Box  >
                                     <IconButton size="large" aria-label="search"  >
-                                        <SearchOutlinedIcon />
+                                        <SearchOutlinedIcon onClick={searchHandler} />
                                     </IconButton>
                                     <IconButton
                                         size="large"
@@ -95,9 +103,12 @@ const TopBanner = () => {
                         </AppBar>
                     </Box>
                 </Box>
-                <Box sx={{marginTop:'15%',marginRight:'10px'}} style={!menu ? { width: '30%' } : { display: 'block' }}>
+                <Box sx={{marginTop:'15%',marginRight:'10px',padding:'10px 70px'}} style={!menu ? { width: '50%' } : { display: 'none' }}>
                     {
-                        !menu && <Header menu={menu} setMenu={setMenu} />
+                        !menu && searchIcon && <Header menu={menu} setMenu={setMenu} searchIcon={searchIcon} searchHandler={searchHandler}  />
+                    }
+                    {
+                        !searchIcon && !menu && <Search searchIcon={searchIcon} searchHandler={searchHandler} />
                     }
                 </Box>
             </Box>

@@ -19,9 +19,18 @@
     color:#898A8A;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 .headerContent li:hover{
  
     color:#000;
  
 }
+
+/* Header search */
+.searchContainer{
+    /* padding-top: 10%; */
+    margin-top: 20px;
+    width: 100%;
+}
+ 

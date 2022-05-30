@@ -4,11 +4,21 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import React, { useState } from "react";
+import Search from './Search'
 
-export default function Header({ setMenu, menu }) {
+
+const Header = ({ setMenu, menu }) => {
+    const [searchIcon, setSearchIcon] = useState(true);
+
     const closeHandler = () => {
         setMenu(!menu)
     }
+    const menuOpenHandler = () => {
+        setMenu(!menu)
+        setSearchIcon(!searchIcon)
+    }
+
     return (
         <Box style={{ display: 'flex', justifyContent: 'center' }} sx={{ flexGrow: 1 }}>
             <div className="headerContainer">
@@ -25,7 +35,7 @@ export default function Header({ setMenu, menu }) {
                 <div>
                     <Box  >
                         <IconButton size="large" aria-label="search"  >
-                            <SearchOutlinedIcon />
+                            <SearchOutlinedIcon onClick={menuOpenHandler} />
                         </IconButton>
                         <IconButton
                             size="large"
@@ -46,7 +56,7 @@ export default function Header({ setMenu, menu }) {
                                     color="inherit"
                                    
                                 >
-                                    <MenuIcon />
+                                    <MenuIcon  />
                                 </IconButton>
                                 :
                                 <IconButton
@@ -64,9 +74,14 @@ export default function Header({ setMenu, menu }) {
 
                 </div>
             </div>
+            {
+                !searchIcon && <Search searchIcon={searchIcon} setSearchIcon={setSearchIcon}/>
+            }
             {/* <div>
                 <Close onClick={closeHandler} sx={{ color: 'white' }} />
             </div> */}
         </Box>
     );
 }
+
+export default  React.memo(Header)
