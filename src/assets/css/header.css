@@ -33,4 +33,29 @@
     margin-top: 20px;
     width: 100%;
 }
+
+/* Nvamenu style */
+.navContainer{
+    display: flex;
+}
+.navItems{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+ 
+.navContainer ul li{
+    list-style: none;
+    padding: 10px 15px;
+   
+}
+.navContainer ul li a{
+    font-weight: bold;
+   text-decoration: none;
+   color: #000;
+   transition: 0.2s ease;
+}
+.navContainer ul li a:hover{
+   color: rgb(67, 120, 236);
+}
  
