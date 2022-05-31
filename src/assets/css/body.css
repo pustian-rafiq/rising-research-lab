@@ -1,0 +1,33 @@
+.singleCard{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25%;
+    border: 1px solid #000;
+    padding: 40px;
+}
+.singleCard .topSection{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.singleCard .topSection img{
+width: 100px;
+height: 100px;
+}
+
+.singleCard .middleSection{
+text-align: justify;
+}
+.singleCard .bottomSection{
+ display: flex;
+ flex-direction: column;
+}
+.singleCard .bottomSection .tagLists{
+ display: flex;
+ flex-direction: row;
+}
+.singleCard .bottomSection .tagLists li{
+  padding-right: 5px;
+}

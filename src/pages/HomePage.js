@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Body from '../components/home/Body'
 import Footer from '../components/home/Footer'
 import NavMenu from '../components/home/NavMenu'
 import NavMenuMobile from '../components/home/NavMenuMobile'
@@ -33,7 +34,7 @@ const HomePage = () => {
       {
         screenSize.dynamicWidth < 520 ? <NavMenuMobile/> :  <NavMenu />
       }
-     
+     <Body/>
       <Footer/>
       <li>Width: <strong>{screenSize.dynamicWidth}</strong></li>
         <li>Height: <strong>{screenSize.dynamicHeight}</strong></li>
