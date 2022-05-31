@@ -1,6 +1,6 @@
 .footerContainer{
     display: flex;
-    height: 30vh;
+    /* height: 30vh; */
     justify-content: space-between;
     background-color: #F0F0F0;
 }
@@ -12,11 +12,11 @@
 .pageSection{
     display: flex;
     flex-direction: column;
- margin-top: 20px;
+    margin-top: 20px;
 }
 .pageSection ul li{
 list-style: none;
- 
+ padding: 5px;
 }
 .pageSection ul li a{
 text-decoration: none;
@@ -80,6 +80,7 @@ list-style: none;
 }
 .middleSection ul li{
     list-style: none;
+    padding: 5px;
 }
 .middleSection ul li a{
     text-decoration: none;
@@ -108,3 +109,19 @@ list-style: none;
 }
 
 /* Responsive of footer */
+
+@media only screen and (max-width: 420px) {
+    .footerContainer {
+      flex-direction: column;
+      font-size: 12px;
+    }
+    /* .rightSection{
+        margin-left: 40px;
+    } */
+    .pageSection{
+        margin-left: 0px;
+    }
+    .leftSection .exploreSection{
+        margin-top:0px;
+    }
+  }
