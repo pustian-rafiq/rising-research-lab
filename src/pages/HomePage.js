@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/home/Footer'
 import NavMenu from '../components/home/NavMenu'
 import TopBanner from '../components/home/TopBanner'
 
@@ -6,8 +7,9 @@ import TopBanner from '../components/home/TopBanner'
 const HomePage = () => {
   return (
     <>
-        <TopBanner/>
-    <NavMenu/>
+      <TopBanner />
+      <NavMenu />
+      <Footer/>
     </>
 
   )
