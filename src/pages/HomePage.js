@@ -4,6 +4,7 @@ import Footer from '../components/home/Footer'
 import NavMenu from '../components/home/NavMenu'
 import NavMenuMobile from '../components/home/NavMenuMobile'
 import TopBanner from '../components/home/TopBanner'
+import LeftSidebar from '../components/sidebar/LeftSidebar'
 
 
 const HomePage = () => {
@@ -30,14 +31,16 @@ const HomePage = () => {
   return (
     <>
     
-      <TopBanner />
+      {/* <TopBanner />
       {
         screenSize.dynamicWidth < 520 ? <NavMenuMobile/> :  <NavMenu />
       }
      <Body/>
       <Footer/>
       <li>Width: <strong>{screenSize.dynamicWidth}</strong></li>
-        <li>Height: <strong>{screenSize.dynamicHeight}</strong></li>
+        <li>Height: <strong>{screenSize.dynamicHeight}</strong></li> */}
+        <TopBanner/>
+        <LeftSidebar/>
     </>
 
   )

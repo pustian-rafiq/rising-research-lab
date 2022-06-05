@@ -1,0 +1,35 @@
+.leftContainer{
+    position: absolute;
+    margin-top: -50px;
+    min-width: 30%;
+    z-index: 999;
+    background-color: aliceblue;
+}
+.leftContainer .items{
+    margin-left: 70px;
+}
+.leftContainer .items ul li{
+     list-style: none;
+     padding: 5px 0px;
+}
+.leftContainer .items ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Icons style */
+.leftContainer .icons ul{
+    display: flex;
+     
+    margin-left: 70px;
+}
+.leftContainer .icons ul li{
+    list-style: none;
+    padding: 10px 10px 10px 0px;
+    margin-left: 0px;
+}
+.leftContainer .icons ul a{
+    text-decoration: none;
+}

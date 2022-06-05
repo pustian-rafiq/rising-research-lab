@@ -265,11 +265,7 @@ const Body = () => {
                         </div>
                     </div>
                 </Grid>
-
             </Grid>
-
-             
-
         </div>
     )
 }

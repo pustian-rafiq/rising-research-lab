@@ -6,6 +6,7 @@
     padding: 40px;
     color: #A0A0A9;
    flex-wrap: wrap;
+   cursor: pointer;
 }
 .singleCard .topSection{
     display: flex;
