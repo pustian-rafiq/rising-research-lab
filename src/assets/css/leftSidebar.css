@@ -1,12 +1,15 @@
 .leftContainer{
     position: absolute;
-    margin-top: -50px;
+    margin-top: -80px;
     min-width: 30%;
     z-index: 999;
+    /* display: flex;
+    flex-direction: column; */
     background-color: aliceblue;
 }
 .leftContainer .items{
     margin-left: 70px;
+    padding-top: 50px;
 }
 .leftContainer .items ul li{
      list-style: none;
@@ -32,4 +35,60 @@
 }
 .leftContainer .icons ul a{
     text-decoration: none;
+}
+
+/* Macin content style */
+.MainContent{
+    margin-top:  0px;
+    /* background-color: #000; */
+    margin-left: 30%;
+    display: flex;
+    width: 100%;
+}
+.singleItem{
+     /* border: 1px solid #000; */
+    /* background-color: rgb(52, 61, 61); */
+    position: relative;
+    width: 100%;
+    /* height: 350px; */
+}
+.singleItem img{
+   
+    width: 100%;
+    height: 350px;
+}
+.singleItem h6{
+   
+    z-index: 999;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 100px;
+    color: #ffffff;
+}
+.singleItem:hover{
+     border-bottom: 1px solid rgb(29, 192, 56);
+}
+.angleUp{
+        position: absolute;
+        top:  330px;
+
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 50px solid #ffffff;
+        margin-left: 50px;
+ 
+}
+.bottomSection{
+    color: #000;
+    padding: 20px 30px;
+}
+.bottomSection h4{
+    margin-top: 0px;
+    color: rgb(156, 156, 156);
+}
+.bottomSection p{
+    margin-top: -10px;
+    color: rgb(156, 156, 156);
 }

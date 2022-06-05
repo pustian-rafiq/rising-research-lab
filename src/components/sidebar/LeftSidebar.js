@@ -1,7 +1,9 @@
 import React from 'react'
+import MainContent from '../MainContent'
 
 const LeftSidebar = () => {
   return (
+      <>
     <div className='leftContainer'>
         <div className='items'>
             <ul>
@@ -24,8 +26,10 @@ const LeftSidebar = () => {
                 
             </ul>
         </div>
-
+      
     </div>
+    <MainContent/>
+    </>
   )
 }
 

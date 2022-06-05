@@ -4,6 +4,7 @@ import Footer from '../components/home/Footer'
 import NavMenu from '../components/home/NavMenu'
 import NavMenuMobile from '../components/home/NavMenuMobile'
 import TopBanner from '../components/home/TopBanner'
+import MainContent from '../components/MainContent'
 import LeftSidebar from '../components/sidebar/LeftSidebar'
 
 
@@ -41,6 +42,7 @@ const HomePage = () => {
         <li>Height: <strong>{screenSize.dynamicHeight}</strong></li> */}
         <TopBanner/>
         <LeftSidebar/>
+        {/* <MainContent/> */}
     </>
 
   )
